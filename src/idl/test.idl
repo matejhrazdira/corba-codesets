@@ -1,0 +1,19 @@
+module test {
+
+	const long EVENT_ID = 123;
+
+	/** All methods return >>> äëöüå <<< in various encodings */
+	interface Server {
+		string getUtf8String();
+		string getCp850String();
+		string getIso88591String();
+		oneway void pushUtf8String();
+		oneway void pushCp850String();
+		oneway void pushIso88591String();
+	};
+
+	struct SomeEvent {
+		string encoding;
+		string testString;
+	};
+};
